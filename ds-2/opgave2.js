@@ -15,6 +15,11 @@ btn.addEventListener("click", function() {
     console.log(inputValue);
     output.innerHTML = makeid(inputValue.length);
 
+    if(inputValue === ' ') {
+        output.innerHTML = "Indtast et ord / password du ønsker krypterede";
+
+    }
+
     // Funktion i en funktion for der er variabler der skal bruges, det virker ikke globalt (inputValue).
     // Fundet på stackoverflow for at genere random tal og bogstaver:
     function makeid(length) {
